@@ -14,6 +14,8 @@ function Crear() {
     tarjeta: '',
     transferencia: '',
     pmrf: '',
+    gasoil: '',
+    otros: '',
   })
 
   const [agencias, setAgencias] = useState([])
@@ -123,8 +125,20 @@ function Crear() {
           <input type="number" name="transferencia" placeholder="0.00" value={form.transferencia} onChange={handleChange} className={inputClass} />
         </div>
       </div>
-      <label className={labelClass}>PMRF (€)</label>
-      <input type="number" name="pmrf" placeholder="0.00" value={form.pmrf} onChange={handleChange} className={inputClass} />
+      
+      <h2 className={sectionTitle}>Gastos</h2>
+        <div className="flex gap-3 mb-3">
+        <div className="flex-1">
+            <label className={labelClass}>Gasoil (€)</label>
+            <input type="number" name="gasoil" placeholder="0.00" value={form.gasoil} onChange={handleChange} className={inputClass} />
+        </div>
+        <div className="flex-1">
+            <label className={labelClass}>PMRF (€)</label>
+            <input type="number" name="pmrf" placeholder="0.00" value={form.pmrf} onChange={handleChange} className={inputClass} />
+        </div>
+        </div>
+        <label className={labelClass}>Otros (€)</label>
+        <input type="number" name="otros" placeholder="0.00" value={form.otros} onChange={handleChange} className={inputClass} />
 
       <h2 className={sectionTitle}>Agencias</h2>
       {agencias.map((ag, i) => (

@@ -65,12 +65,19 @@ function Detalle() {
         <div className="flex justify-between pt-2"><span className={dataLabel}>Patrón (60%)</span><span className="text-emerald-400 text-sm font-semibold">{(liq.taximetro * 0.6).toFixed(2)} €</span></div>
       </div>
 
-      <h2 className={sectionTitle}>obros</h2>
+      <h2 className={sectionTitle}>Cobros</h2>
       <div className="bg-gray-800 border border-gray-700 rounded-xl p-4">
         <div className={dataRow}><span className={dataLabel}>Tarjeta</span><span className={dataValue}>{liq.tarjeta} €</span></div>
         <div className={dataRow}><span className={dataLabel}>Transferencia</span><span className={dataValue}>{liq.transferencia} €</span></div>
         <div className="flex justify-between pt-2"><span className={dataLabel}>PMRF</span><span className={dataValue}>{liq.pmrf} €</span></div>
-      </div>
+      </div> 
+
+      <h2 className={sectionTitle}>Gastos</h2>
+        <div className="bg-gray-800 border border-gray-700 rounded-xl p-4">
+            <div className={dataRow}><span className={dataLabel}>Gasoil</span><span className={dataValue}>{liq.gasoil} €</span></div>
+            <div className={dataRow}><span className={dataLabel}>PMRF</span><span className={dataValue}>{liq.pmrf} €</span></div>
+            <div className="flex justify-between pt-2"><span className={dataLabel}>Otros</span><span className={dataValue}>{liq.otros} €</span></div>
+        </div>
 
       <h2 className={sectionTitle}>Agencias</h2>
       {agencias.length === 0 && <p className="text-gray-500 text-sm">Sin agencias</p>}
